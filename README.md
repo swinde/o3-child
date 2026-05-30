@@ -5,33 +5,51 @@
 o3-shop
 
 
-### Allgemeine Information
+### general information
 
-Dieses o3-shop Childtheme kann für updatesichere Anpassungen am Wave-Theme verwendet werden.
+This o3-shop child theme can be used for update-safe adjustments to the o3-shop theme.
 
-Die Ordnerstruktur ist bereits vorhanden, so dass Du nur noch die zu ändernden Dateien aus o3-shop in den entsprechenden Ordner kopieren musst.
-Ist das Childtheme aktiviert, werden die darin enthaltenen Dateien bevorzugt vom o3-shop verwendet.
+The folder structure already exists, so you just have to copy the files you want to change from o3-shop into the corresponding folder.
+If the child theme is activated, the files it contains are primarily used by the o3 shop.
 
-Kopiere nicht alle Dateien in das Childtheme, sondern nur die, die Du anpassen willst!
-Die Dateien, welche nicht im Childtheme vorhanden sind, nimmt der o3-shop vom originalen o3-Theme.
+Don't copy all the files into the child theme, just the ones you want to customize!
+The o3-shop takes the files that are not in the child theme from the original o3 theme.
 
 
-### Installation (Kurzfassung)
+### Installation (short version)
 
 `composer require o3-shop/o3-child`
 
 
-### Installation (Langform)
+### Installation (long version)
 
-Erstellen Sie via SSH-Client eine Verbindung mit dem Server, auf dem Ihr OXID eShop liegt.
-Wechseln Sie in Ihr o3-shop-Projektverzeichnis, in dem sich die Datei composer.json sowie die source- und vendor-Ordner befinden.
-Führen Sie dort folgenden Befehl aus: `composer require o3-shop/o3-child`
+Create a connection to the server on which your o3-shop eShop is located via SSH client.
+Go to your o3-shop project directory, where the composer.json file and the source and vendor folders are located.
+Run the following command there: `composer require o3-shop/o3-child`
 
 
-### Childtheme aktivieren
+### Activate child theme
 
-Im Adminbereich unter *Erweiterungen → Themes → o3-child_ChildTheme* den *Aktivieren* Button betätigen.
-Dann Cache leeren und los gehts, mein Freund!
+In the admin area under *Extensions → Themes → o3-child_ChildTheme* click the *Activate* button.
+Then clear the cache and off you go!
+
+### Development
+
+**Use this method if:** You want to customize the theme or develop new features.
+
+| Requirement | Minimum Version | Notes |
+|------------|----------------|-------|
+| Node.js | v22.13.0 | [Download](https://nodejs.org/) |
+| npm | 10.x | Included with Node.js |
+| Gulp CLI | 3.0.0 | [Download](https://gulpjs.com/) |
+
+#### Copy build files for existing theme
+
+```bash
+cp -r <DOCUMENT_ROOT>/vendor/o3-shop/o3-theme/build <DOCUMENT_ROOT>/source/Application/views/o3-child
+cp -r <DOCUMENT_ROOT>/vendor/o3-shop/o3-theme/package.json <DOCUMENT_ROOT>/source/Application/views/o3-child
+```
+
 
 
 ### License
